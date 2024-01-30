@@ -1,2 +1,2 @@
 # competitive-practice
-Practicing Codeforces problemas
+Practicing Codeforces problems
