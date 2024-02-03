@@ -7,5 +7,11 @@ using namespace std;
 
 int main() {
     cpu();
-    
+    string input; cin >> input;
+    set<char> lets;
+    for (const auto &s: input)
+        lets.insert(s);
+
+    if (lets.size() % 2 != 0) cout << "IGNORE HIM!";
+    else                      cout << "CHAT WITH HER!";
 }
