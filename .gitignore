@@ -1,5 +1,7 @@
 */*.exe
 
+*/.idea
+
 */.vscode
 
 */*.out
