@@ -12,7 +12,9 @@ int main() {
     int res = 0;
     for (int i=0; i<n; ++i) {
         cin >> a1 >> a2 >> a3;
-        if ((!a1 & !a2 & a3) | (!a1 & a2 & !a3) | (a1 & !a2 & !a3) )  ++res;
+        if ((!a1 & !a2 & a3) | (!a1 & a2 & !a3) | 
+            (a1 & !a2 & !a3) | (!a1 & !a2 & !a3))  
+          ++res;
     }
     cout << n-res << endl;
 }

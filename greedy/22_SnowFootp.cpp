@@ -7,5 +7,26 @@ using namespace std;
 
 int main() {
     cpu();
-    
+    int n; cin >> n;
+    string road; cin >> road;
+
+    // eleccion greedy: index first char no point.
+    bool start = false;
+    int s = 0,  step = 0;
+    for (const char c: road) {
+        if (c == '.') {
+            if (!start) {s++;}
+        }
+        else if (c == 'R') {
+            if (start) step++;
+            else {
+                step = ++s;
+                start = true;
+            }
+        }
+        else if (c == 'L')
+            {if (start) step--;}
+        cout << s << endl;
+    }
+    cout << s << " " << step << endl;
 }

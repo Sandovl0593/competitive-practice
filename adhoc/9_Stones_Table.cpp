@@ -9,9 +9,10 @@ int main() {
     cpu();
     int n; cin >> n;
     string s; cin >> s;
-    set<char> only;
+    int i=0, j=1, res = 0;
 
-    for (const auto &el: s)
-        only.insert(el);
-    cout << s.size() - only.size() << endl;
+    for (int i=0; i<n-1; ++i) {
+        if (s[i] == s[i+1])   ++res;
+    }
+    cout << res << endl;
 }

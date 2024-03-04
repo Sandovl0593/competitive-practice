@@ -14,12 +14,10 @@ int main() {
 
     int count = 0;
     for (int i=0; i<n-1; ++i) {
-        for (int j=i+1; j<n; ++j)
+        for (int j=i+1; j<n; ++j) {
            if (g[i][0] == g[j][1])  ++count;
-    }
-
-    for (int i=0; i<n-1; ++i) {
-        for (int j=i+1; j<n; ++j)
            if (g[i][1] == g[j][0])  ++count;
+        }
     }
+    cout << count << endl;
 }
