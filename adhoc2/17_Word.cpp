@@ -8,17 +8,23 @@ using namespace std;
 int main() {
     cpu();
     string s; cin >> s;
+    string res = "";
     int lowers = 0;
     int n = s.size();
-    for (int i=0; i<n; ++i)
+    for (int i=0; i<n; ++i) {
         if (s[i] >= 97 && s[i] <= 122) ++lowers;
+    }
     
     for (int i=0; i<n; ++i) {
-        if (lowers < n/2)
-            if (s[i] <= 90 && s[i] >= 65)  s[i] += 32;
-        else
-            if (s[i] >= 97 && s[i] <= 122) s[i] -= 32;
+        if (lowers < n - lowers) {
+            if (s[i] >= 97 && s[i] <= 122) res += (s[i] - 32);
+            else    res += s[i];
+        }
+        else {
+            if (s[i] <= 90 && s[i] >= 65)  res += (s[i] + 32);
+            else    res += s[i];
+        }
     }
 
-    cout << s << endl;
+    cout << res << endl;
 }
